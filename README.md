@@ -5,7 +5,7 @@
   
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=mhddaraaa&label=Profile%20views&color=0e75b6&style=flat" alt="mhddaraaa" /> </p>
 
-- 🌱 I’m currently learning **Reinforcement Learning**
+- 🌱 I’m currently learning **Generative Adversarial Network (GANs)**
 
 <h3 align="left">Connect with me:</h3>
 
