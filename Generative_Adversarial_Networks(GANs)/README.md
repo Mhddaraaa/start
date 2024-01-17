@@ -114,6 +114,109 @@ $$
 $$
 
 
+## **Problems in GANs**
+
+- **Mode collapse**:
+<img align='right' width='200' src="https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/49d4ae5770a264446b799e58b05b77ef842ebb76/1-Figure1-1.png">
+
+ During the training, the generator may collapse to a setting where it always produces same outputs.
+
+ - **two causes of mode collapse in GANs**:
+
+    1. **catastrophic forgetting:**
+        Catastrophic forgetting refers to the phenomenon in which a model trained on a specific task forgets the knowledge it has gained while learning a new task.
+
+    2. **discriminator overfitting**
+<br>
+<br>
+
+- **Vanishing gradient**
+
+<img align='right' width='200' src='https://production-media.paperswithcode.com/methods/Screen_Shot_2020-05-25_at_2.53.08_PM.png'>
+
+When the Generated images and Real images distribution are like each other or far from each other the gradient will be close to zero
+
+<br>
+<br>
+<br>
+
+## **Solution**
+
+**Earth Mover’s distance**:
+<img align='right' width='200' src='https://www.researchgate.net/publication/234129934/figure/fig1/AS:643915959005186@1530532936719/d-measures-the-distance between-two-normal-distributions-of-equal-variance.png'>
+<p align='justify'>
+    &emsp;&emsp;Distance between two probability distributions. It can be interpreted as the minimum energy cost of moving and transforming a pile of dirt in the shape of one probability distribution to the shape of the other distribution.
+</p>
+
+<br>
+<br>
+<br>
+
+## **WLOSS**
+
+### **BCELoss**
+
+$$
+    \large -\frac{1}{n}\sum_{i=1}^{n}{-[y_i\log(𝚢^{̂}_i) + (1-y_i)\log(1-y^{̂}_i)]}
+$$
+
+<p align='center'>
+    &emsp;&emsp;But in here we will use the mean of the outputs so the gradient of any point won't be zero
+</p>
+
+
+<br>
+
+### **Wasserstein Loss**
+
+$$
+    \large -\frac{1}{n}\sum_{i=1}^{n}{y_i * \hat{𝚢_i}}
+$$
+
+where the $\hat{y}$ is the output of the Critic:
+
+#### **Generator Loss**
+<br>
+
+$$
+    \underset{g}{\mathrm{min}} - [\mathbb{E}(C(G(z)))]
+$$
+
+
+$$
+   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Critic \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))}
+$$
+
+#### **Critic Loss**
+<br>
+<p align='justify'>
+    &emsp;&emsp;<b>One</b> matrix to calculate the loss for **real** input and <b>zeros</b> matrix to calculate the loss for <b>fake</b> input which is the output of generator so the <b>BCE</b> formular will be:
+</p>
+
+<br>
+
+$$
+   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))} \\
+   \large 𝐗 ⟶ Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(𝐗)} \\
+    \underset{d}{\mathrm{min}} - [\mathbb{E}(C(𝐗))) - \mathbb{E}(C(G(z)))]
+$$
+
+<br>
+
+<p align='justify'>
+    <b>Discriminator</b> output is between 0 and 1
+    <br>
+    <b>Discriminator</b> output is between 0 and 1
+    <br>
+    <b>Critic</b> output not restricted to be between 0 and 1
+</p>
+
+
+
+- **MinimaMax game:**
+
+    Critic tries to maximize the the differences, While Generetor tries to minimize the difference
+
 <p align='justify'>
     &emsp;&emsp;
 </p>
