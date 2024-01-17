@@ -1,6 +1,6 @@
 # **Generative Adversarial Networks (GANs)**
 
-<img align='center' width='100' src="https://content.wolfram.com/sites/39/2020/08/GAN-Functionality.png">
+<img align='center' width='1000' src="https://content.wolfram.com/sites/39/2020/08/GAN-Functionality.png">
 
 <img align='center' width='100' src="">
 <br>
