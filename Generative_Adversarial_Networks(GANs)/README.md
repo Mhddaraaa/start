@@ -113,6 +113,14 @@ $$
     \large -\frac{1}{n}\sum_{i=1}^{n}{-[\log(D(x)) + \log(1 - D(G(z)))]}
 $$
 
+$$
+   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Criritc \xrightarrow[\text{}]{\text{C(G(z))}} -\frac{1}{n}\sum_{i=1}^{n}{(\log(1 - D(G(z))))}
+$$
+
+$$
+   \large 𝐗 ⟶ Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \frac{1}{n}\sum_{i=1}^{n}{\log(D(x))}
+$$
+
 
 ## **Problems in GANs**
 
@@ -179,12 +187,11 @@ where the $\hat{y}$ is the output of the Critic:
 <br>
 
 $$
-    \underset{g}{\mathrm{min}} - [\mathbb{E}(C(G(z)))]
-$$
-
-
-$$
    \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Critic \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))}
+$$
+
+$$
+    \underset{g}{\mathrm{min}} - [\mathbb{E}(C(G(z)))]
 $$
 
 #### **Critic Loss**
@@ -196,8 +203,14 @@ $$
 <br>
 
 $$
-   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))} \\
-   \large 𝐗 ⟶ Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(𝐗)} \\
+   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))}
+$$
+
+$$
+   \large 𝐗 ⟶ Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(𝐗)}
+$$
+
+$$
     \underset{d}{\mathrm{min}} - [\mathbb{E}(C(𝐗))) - \mathbb{E}(C(G(z)))]
 $$
 
