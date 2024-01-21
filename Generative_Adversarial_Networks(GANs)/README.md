@@ -1,8 +1,6 @@
 # **Generative Adversarial Networks (GANs)**
 
 <img align='center' width='1000' src="https://content.wolfram.com/sites/39/2020/08/GAN-Functionality.png">
-
-<img align='center' width='100' src="">
 <br>
 
 <p align='justify'>
@@ -231,19 +229,15 @@ $$
 </p>
 
 ### **Lipschitz continuity**
-<img aligh='center' width='300' src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Lipschitz_Visualisierung.gif/640px-Lipschitz_Visualisierung.gif">
-
+<img aligh='left' width='300' src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Lipschitz_Visualisierung.gif/640px-Lipschitz_Visualisierung.gif">
 <p align='justify'>
     &emsp;&emsp;The differential of the function need to satisfy $| f^{'} | \leq K$ in every point, meaning it should be K-Lipschitz continuous.
     <br>Here $K$ is known as a $K$ Lipschitz constant for function $f(...)$. Functions that are everywhere continuously differentiable is Lipschitz         continuous, because the derivative, estimated as $\frac{\lvert f(x_1) - f(x_2) \rvert}{\lvert x_1 - x_2 \rvert}$, has bounds. However, a Lipschitz continuous function may not be everywhere differentiable, such as $f(x) = \lvert x \rvert$.
-    
 </p>
 
 <br>
 
 #### **Force the function to be 1-Lipschitz**
-
-$\displaystyle \|W\| $
 
 - **Weight clipping**
 
@@ -267,10 +261,91 @@ $$
     𝐗 = α * 𝐗 + (1 - α) * G(z)
 $$
 
+## **LSGANs**
+
+- LSGAN is proposed, in which the least squares loss function is adopted for the discriminator.
+- LSGANs are able to generate higher quality images than regular GANs.beside, LSGANs perform more stable during the learning process.
+
+**WHy?**
+    
+1. More difficult to saturate → Better stability, **Least squares** loss function is flat only at one point; **Sigmoid** cross entropy will saturate when x is large
+2. Tougher penalties → Higher Quailty
+
+**Generator Loss**
+
+$$
+    \large \underset{g}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z))-c)^2
+$$
+
+<br>
+
+$$
+   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Discriminator \xrightarrow[\text{}]{\text{D(G(z))}} (D(G(z))-c)^2
+$$
+
+<br>
+
+**Critic Loss**
+
+$$
+    \large \underset{d}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E} [D(𝐗) - b)^2] + \frac{1}{2}\mathbb{E} [D(G(z))-a)^2]
+$$
+
+<br>
+
+$$
+   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Discriminator \xrightarrow[\text{}]{\text{D(G(z))}} D(G(z))-a)^2
+$$
+
+<br>
+
+$$
+   \large 𝐗 ⟶ Discriminator \xrightarrow[\text{}]{\text{C(G(z))}} (D(𝐗) - b)^2
+$$
+
+<br>
+
+- $\large \text{a, b, c}$
+    - a: labels for fake data; -->Discriminator
+    - b: labels for real data; -->Discriminator
+    - c: values that G wants D to believe; -->Generator
+    - **a, b** coding scheme for the discriminator, where **a** and **b** are the labels for fake data and real data, respectively. Then the. **c** denotes the value that G wants D to believe for fake data.
+
+<br>
+
+**Parameters Selection**
+
+One condition is to set $b-c=1$ and $b-a=2$. minimizing **Pearson X² divergence** is equel to minimizing the above loss functions.
+
+- For example, $a = −1, b = 1, c = 0$:
+
+$$
+    \large \underset{d}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E} [D(𝐗) - 1)^2] + \frac{1}{2}\mathbb{E} [D(G(z))+1)^2]
+$$
+
+$$
+    \large \underset{g}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z)))^2
+$$
+
+<br>
+
+Let b = c ⇒ Generating samples as real as possible
+- For example, $a = 0, b = −1, c = −1$:
+
+$$
+    \large \underset{d}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E} [D(𝐗) - 1)^2] + \frac{1}{2}\mathbb{E} [D(G(z)))^2]
+$$
+
+$$
+    \large \underset{g}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z))-1)^2
+$$
+
 
 <p align='justify'>
     &emsp;&emsp;
 </p>
+
+<img align='center' width='100' src="">
 
 
 <br>
