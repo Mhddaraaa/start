@@ -257,7 +257,10 @@ $$
 <br>
 
 $$
-    GP = \left( \displaystyle \|∇C(𝐗) \| - 1 \right)^2 \\
+    GP = \left( \displaystyle \|∇C(𝐗) \| - 1 \right)^2
+$$
+
+$$
     𝐗 = α * 𝐗 + (1 - α) * G(z)
 $$
 
