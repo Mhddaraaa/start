@@ -125,7 +125,7 @@ $$
 ## **Problems in GANs**
 
 - **Mode collapse**:
-<img align='right' width='200' src="https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/49d4ae5770a264446b799e58b05b77ef842ebb76/1-Figure1-1.png">
+<img align='right' width='400' src="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-030-36808-1_5/MediaObjects/493029_1_En_5_Fig3_HTML.png">
 
  During the training, the generator may collapse to a setting where it always produces same outputs.
 
@@ -151,7 +151,7 @@ When the Generated images and Real images distribution are like each other or fa
 ## **Solution**
 
 **Earth Mover’s distance**:
-<img align='right' width='200' src='https://www.researchgate.net/publication/234129934/figure/fig1/AS:643915959005186@1530532936719/d-measures-the-distance between-two-normal-distributions-of-equal-variance.png'>
+<img align='right' width='400' src='https://ydata.ai/hs-fs/hubfs/Blog%20YData/Content/visualization_of_earth_mover_s_distance.webp?width=800&height=298&name=visualization_of_earth_mover_s_distance.webp'>
 <p align='justify'>
     &emsp;&emsp;Distance between two probability distributions. It can be interpreted as the minimum energy cost of moving and transforming a pile of dirt in the shape of one probability distribution to the shape of the other distribution.
 </p>
@@ -197,7 +197,7 @@ $$
 #### **Critic Loss**
 <br>
 <p align='justify'>
-    &emsp;&emsp;<b>One</b> matrix to calculate the loss for **real** input and <b>zeros</b> matrix to calculate the loss for <b>fake</b> input which is the output of generator so the <b>BCE</b> formular will be:
+    &emsp;&emsp;<b>One</b> matrix to calculate the loss for <b>real</b> input and <b>zeros</b> matrix to calculate the loss for <b>fake</b> input which is the output of generator so the <b>BCE</b> formular will be:
 </p>
 
 <br>
@@ -219,8 +219,6 @@ $$
 <p align='justify'>
     <b>Discriminator</b> output is between 0 and 1
     <br>
-    <b>Discriminator</b> output is between 0 and 1
-    <br>
     <b>Critic</b> output not restricted to be between 0 and 1
 </p>
 
@@ -228,7 +226,47 @@ $$
 
 - **MinimaMax game:**
 
-    Critic tries to maximize the the differences, While Generetor tries to minimize the difference
+  <p align='justify'>
+    &emsp;&emsp;<b>Critic</b> tries to maximize the the differences, While <b>Generetor</b> tries to minimize the difference
+</p>
+
+### **Lipschitz continuity**
+<img aligh='center' width='300' src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Lipschitz_Visualisierung.gif/640px-Lipschitz_Visualisierung.gif">
+
+<p align='justify'>
+    &emsp;&emsp;The differential of the function need to satisfy $| f^{'} | \leq K$ in every point, meaning it should be K-Lipschitz continuous.
+    <br>Here $K$ is known as a $K$ Lipschitz constant for function $f(...)$. Functions that are everywhere continuously differentiable is Lipschitz         continuous, because the derivative, estimated as $\frac{\lvert f(x_1) - f(x_2) \rvert}{\lvert x_1 - x_2 \rvert}$, has bounds. However, a Lipschitz continuous function may not be everywhere differentiable, such as $f(x) = \lvert x \rvert$.
+    
+</p>
+
+<br>
+
+#### **Force the function to be 1-Lipschitz**
+
+$\displaystyle \|W\| $
+
+- **Weight clipping**
+
+<p align='justify'>
+    &emsp;&emsp;by clipping all entries of W (output of each layer) to within some interval ${\displaystyle [-c,c]}$, we have can bound $\displaystyle \|W\| $.
+    where $\displaystyle \|.\|_s$  is the operator norm
+</p>
+
+- **Gradient penalty**
+
+<br>
+
+$$
+   \large LOSS =  - \left( \overline{C(𝐗))} - \overline{C(G(z))} \right) + 𝜆*GP
+$$
+
+<br>
+
+$$
+    GP = \left( \displaystyle \|∇C(𝐗) \| - 1 \right)^2 \\
+    𝐗 = α * 𝐗 + (1 - α) * G(z)
+$$
+
 
 <p align='justify'>
     &emsp;&emsp;
