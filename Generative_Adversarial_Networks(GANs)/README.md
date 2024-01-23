@@ -343,6 +343,25 @@ $$
     \large \underset{g}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z))-1)^2
 $$
 
+## **RaLSGANs**
+
+**Generator Loss**\
+<br>
+
+$$
+    \large \underset{g}{\mathrm{min}} \large L_{RaLSGAN} = \mathbb{E} \left[\left(D(G(z)-\mathbb{E}[D(𝐗)]-1 \right)^2 \right] + \mathbb{E} \left[\left(D(𝐗)-\mathbb{E}[D(G(z))]+1 \right)^2 \right]
+$$
+
+<br>
+
+**Critic Loss**
+
+<br>
+
+$$
+    \large \underset{d}{\mathrm{min}} \large L_{RaLSGAN} = \mathbb{E} \left[\left(D(𝐗)-\mathbb{E}[D(G(z))]-1 \right)^2 \right] + \mathbb{E} \left[\left(D(G(z)-\mathbb{E}[D(𝐗)]+1 \right)^2 \right]
+$$
+
 
 <p align='justify'>
     &emsp;&emsp;
