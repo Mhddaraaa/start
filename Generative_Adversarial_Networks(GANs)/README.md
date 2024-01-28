@@ -19,7 +19,6 @@
 </p>
 
 ## **Discriminative vs. Generative Modeling**
-
 <p align='justify'>
     &emsp;&emsp;In <b>supervised learning</b>, we may be interested in developing a model to predict a class label given an example of input variables.
     This predictive modeling task is called classification. Classification is also traditionally referred to as <b>discriminative modeling</b>.
@@ -35,14 +34,15 @@
 <br>
 
 ## **What Are Generative Adversarial Networks?**
-<img align='right' width='500' src="https://cdn-images-1.medium.com/max/800/1*9eunrJ0BBtjotX1LirZW9Q.gif">
+<img align='left' width='200' src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9124573e-5cd7-4016-a280-6e8583aed918/d6izkti-a2976cb5-c22b-41d0-be17-532ca0a5cf72.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkxMjQ1NzNlLTVjZDctNDAxNi1hMjgwLTZlODU4M2FlZDkxOFwvZDZpemt0aS1hMjk3NmNiNS1jMjJiLTQxZDAtYmUxNy01MzJjYTBhNWNmNzIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.MPaMUcdADhVvce40RcmwF5PZAYMKllIMB4cZikyP228">
+<img align='right' width='450' src="https://cdn-images-1.medium.com/max/800/1*9eunrJ0BBtjotX1LirZW9Q.gif">
 <p align='justify'>
     &emsp;&emsp;Generative adversarial networks are based on a game theoretic scenario in which the generator network must compete against an adversary.
-    The generator network directly produces samples. Its adversary, the discriminator network, attempts to distinguish between samples drawn from the
-    training data and samples drawn from the generator.
+    The <b>generator</b> network directly produces samples. Its adversary, the <b>discriminator</b> network, attempts to distinguish between samples drawn
+    from thetraining data and samples drawn from the generator.
 </p>
 <p align='justify'>
-    &emsp;&emsp;Generative modeling is an unsupervised learning problem, The two models, the generator and discriminator, are trained together.
+    &emsp;&emsp;Generative modeling is an <b>unsupervised</b> learning problem, The two models, the generator and discriminator, are <b>trained together</b>.
     The generator generates a batch of samples, and these, along with real examples from the domain, are provided to the discriminator and classified as
     real or fake. The discriminator is then updated to get better at discriminating real and fake samples in the next round, and importantly,
     the generator is updated based on how well, or not, the generated samples fooled the discriminator.
@@ -108,15 +108,11 @@ $$
 where the $\hat{y}$ is the last output of the Discriminator:
 
 $$
-    \large -\frac{1}{n}\sum_{i=1}^{n}{-[\log(D(x)) + \log(1 - D(G(z)))]}
-$$
-
-$$
-   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Criritc \xrightarrow[\text{}]{\text{C(G(z))}} -\frac{1}{n}\sum_{i=1}^{n}{(\log(1 - D(G(z))))}
-$$
-
-$$
+\begin{gather*}
+    \large -\frac{1}{n}\sum_{i=1}^{n}{-[\log(D(x)) + \log(1 - D(G(z)))]} \\
+   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Criritc \xrightarrow[\text{}]{\text{C(G(z))}} -\frac{1}{n}\sum_{i=1}^{n}{(\log(1 - D(G(z))))} \\
    \large 𝐗 ⟶ Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \frac{1}{n}\sum_{i=1}^{n}{\log(D(x))}
+\end{gather*}
 $$
 
 
@@ -185,11 +181,10 @@ where the $\hat{y}$ is the output of the Critic:
 <br>
 
 $$
-   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Critic \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))}
-$$
-
-$$
-    \underset{g}{\mathrm{min}} - [\mathbb{E}(C(G(z)))]
+\begin{gather*}
+    \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Critic \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))} \\
+    \huge \underset{g}{\mathrm{min}} - [\mathbb{E}(C(G(z)))]
+\end{gather*}
 $$
 
 #### **Critic Loss**
@@ -201,15 +196,11 @@ $$
 <br>
 
 $$
-   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))}
-$$
-
-$$
-   \large 𝐗 ⟶ Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(𝐗)}
-$$
-
-$$
-    \underset{d}{\mathrm{min}} - [\mathbb{E}(C(𝐗))) - \mathbb{E}(C(G(z)))]
+\begin{gather*}
+    \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(G(z))} \\
+    \large 𝐗 ⟶ Criritc \xrightarrow[\text{}]{\text{C(G(z))}} \overline{C(𝐗)} \\
+    \huge \underset{d}{\mathrm{min}} - [\mathbb{E}(C(𝐗))) - \mathbb{E}(C(G(z)))]
+\end{gather*}
 $$
 
 <br>
@@ -254,14 +245,11 @@ $$
    \large LOSS =  - \left( \overline{C(𝐗))} - \overline{C(G(z))} \right) + 𝜆*GP
 $$
 
-<br>
-
 $$
-    GP = \left( \displaystyle \|∇C(𝐗) \| - 1 \right)^2
-$$
-
-$$
-    𝐗 = α * 𝐗 + (1 - α) * G(z)
+\begin{align*}
+    GP &= \left( \displaystyle \|∇C(𝐗) \| - 1 \right)^2 \\
+    𝐗  &= α * 𝐗 + (1 - α) * G(z)
+\end{align*}
 $$
 
 ## **LSGANs**
@@ -277,13 +265,10 @@ $$
 **Generator Loss**
 
 $$
-    \large \underset{g}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z))-c)^2
-$$
-
-<br>
-
-$$
+\begin{gather*}
+    \large \underset{g}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z))-c)^2\\
    \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Discriminator \xrightarrow[\text{}]{\text{D(G(z))}} (D(G(z))-c)^2
+\end{gather*}
 $$
 
 <br>
@@ -291,19 +276,11 @@ $$
 **Critic Loss**
 
 $$
-    \large \underset{d}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E} [D(𝐗) - b)^2] + \frac{1}{2}\mathbb{E} [D(G(z))-a)^2]
-$$
-
-<br>
-
-$$
-   \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Discriminator \xrightarrow[\text{}]{\text{D(G(z))}} D(G(z))-a)^2
-$$
-
-<br>
-
-$$
-   \large 𝐗 ⟶ Discriminator \xrightarrow[\text{}]{\text{C(G(z))}} (D(𝐗) - b)^2
+\begin{gather*}
+    \large \underset{d}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E} [D(𝐗) - b)^2] + \frac{1}{2}\mathbb{E} [D(G(z))-a)^2] \\
+    \large 𝒁 ⟶ Generator \xrightarrow[\text{}]{\text{G(z)}} Discriminator \xrightarrow[\text{}]{\text{D(G(z))}} D(G(z))-a)^2 \\
+    \large 𝐗 ⟶ Discriminator \xrightarrow[\text{}]{\text{C(G(z))}} (D(𝐗) - b)^2 
+\end{gather*}
 $$
 
 <br>
@@ -323,11 +300,10 @@ One condition is to set $b-c=1$ and $b-a=2$. minimizing **Pearson X² divergence
 - For example, $a = −1, b = 1, c = 0$:
 
 $$
-    \large \underset{d}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E} [D(𝐗) - 1)^2] + \frac{1}{2}\mathbb{E} [D(G(z))+1)^2]
-$$
-
-$$
-    \large \underset{g}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z)))^2
+\begin{align*}
+    \large \underset{d}{\mathrm{min}} L_{LSGAN} &= \frac{1}{2} \mathbb{E} [D(𝐗) - 1)^2] + \frac{1}{2}\mathbb{E} [D(G(z))+1)^2] \\
+    \large \underset{g}{\mathrm{min}} L_{LSGAN} &= \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z)))^2
+\end{align*}
 $$
 
 <br>
@@ -336,11 +312,10 @@ Let b = c ⇒ Generating samples as real as possible
 - For example, $a = 0, b = −1, c = −1$:
 
 $$
-    \large \underset{d}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E} [D(𝐗) - 1)^2] + \frac{1}{2}\mathbb{E} [D(G(z)))^2]
-$$
-
-$$
-    \large \underset{g}{\mathrm{min}} L_{LSGAN} = \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z))-1)^2
+\begin{align*} 
+    \large \underset{d}{\mathrm{min}} L_{LSGAN} &= \frac{1}{2} \mathbb{E} [D(𝐗) - 1)^2] + \frac{1}{2}\mathbb{E} [D(G(z)))^2] \\
+    \large \underset{g}{\mathrm{min}} L_{LSGAN} &= \frac{1}{2} \mathbb{E}_{z \sim P_z(z)}(D(G(z))-1)^2
+\end{align*}
 $$
 
 ## **RaLSGANs**
