@@ -15,6 +15,7 @@
 - [5_GANs_pytorch_RelativisticLSGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/5_GANs_pytorch_RelativisticLSGAN.ipynb)
 - [6_GANs_pytorch_ConditionalGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/6_GANs_pytorch_ConditionalGAN.ipynb)
 - [7_GANs_pytorch_InfoGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/7_GANs_pytorch_InfoGAN.ipynb)
+- [8_Fréchet_inception_distance(FID)](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/8_Fréchet_inception_distance(FID).ipynb)
   
 <p align='justify'>
     &emsp;&emsp;
