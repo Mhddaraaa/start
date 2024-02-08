@@ -8,14 +8,18 @@
     &emsp;&emsp; Click on below links to open each jupyter notebook in google colab
 </p>
 
-- [1_GANs_pytorch](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/1_GANs_pytorch.ipynb)
-- [2_GANs_pytorch_DCGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/2_GANs_pytorch_DCGAN.ipynb)
-- [3_GANs_pytorch_WGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/3_GANs_pytorch_WGAN.ipynb)
-- [4_GANs_pytorch_LSGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/4_GANs_pytorch_LSGAN.ipynb)
-- [5_GANs_pytorch_RelativisticLSGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/5_GANs_pytorch_RelativisticLSGAN.ipynb)
-- [6_GANs_pytorch_ConditionalGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/6_GANs_pytorch_ConditionalGAN.ipynb)
-- [7_GANs_pytorch_InfoGAN](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/7_GANs_pytorch_InfoGAN.ipynb)
-- [8_Fréchet_inception_distance(FID)](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/8_Fréchet_inception_distance(FID).ipynb)
+[logo]: https://colab.research.google.com/assets/colab-badge.svg
+
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/1_GANs_pytorch.ipynb) &nbsp; **GANs**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/2_GANs_pytorch_DCGAN.ipynb) &nbsp; **DCGAN**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/3_GANs_pytorch_WGAN.ipynb) &nbsp; **WGAN**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/4_GANs_pytorch_LSGAN.ipynb) &nbsp; **LSGAN**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/5_GANs_pytorch_RelativisticLSGAN.ipynb) &nbsp; **RelativisticLSGAN**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/6_GANs_pytorch_ConditionalGAN.ipynb) &nbsp; **ConditionalGAN**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/7_GANs_pytorch_InfoGAN.ipynb)  &nbsp; **InfoGAN**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/8_Fréchet_inception_distance(FID).ipynb) &nbsp; **Fréchet inception distance(FID)**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/9_GANs_pytorch_SRGAN.ipynb) &nbsp; **SRGAN**
+
   
 <p align='justify'>
     &emsp;&emsp;
