@@ -19,6 +19,7 @@
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/7_GANs_pytorch_InfoGAN.ipynb)  &nbsp; **InfoGAN**
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/8_Fréchet_inception_distance(FID).ipynb) &nbsp; **Fréchet inception distance(FID)**
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/9_GANs_pytorch_SRGAN.ipynb) &nbsp; **SRGAN**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/Generative_Adversarial_Networks(GANs)/10_GANs_pytorch_ESRGAN.ipynb) &nbsp; **ESRGAN**
 
   
 <p align='justify'>
