@@ -12,7 +12,7 @@
 
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ElectroEncephaloGraphy(EEG)/1_MNE_loadData.ipynb) &nbsp; **Load Data**
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ElectroEncephaloGraphy(EEG)/2_MNE_filterDataFourier.ipynb) &nbsp; **Fourier Filter**
-- - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ElectroEncephaloGraphy(EEG)/3_MNE_ICA.ipynb) &nbsp; **ICA**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ElectroEncephaloGraphy(EEG)/3_MNE_ICA.ipynb) &nbsp; **ICA**
 
 
 
