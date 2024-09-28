@@ -1,6 +1,6 @@
 # **ElectroEncephaloGraphy (EEG)**
 
-<img align='center' width='800' src="https://www.healthresearch.org/wp-content/uploads/2016/05/eeg-brain-function.jpg">
+<img align='center' width='800' src="https://github.com/Mhddaraaa/start/blob/main/ElectroEncephaloGraphy(EEG)/ICA.png">
 <br>
 
 ## Open notebooks in colab
@@ -44,7 +44,7 @@ Primarily usage: Diagnosing neurological conditions, Sleep studies (REM and non-
   which is a standardized placement method for consistency. Three main components are: electrodes, amplification, and recording
 </p>
 
-## **event-related potentials (ERPs) (click for more information)**
+## **event-related potentials (ERPs)**
 <p align='justify'>
     &emsp;&emsp;which are brain responses triggered by specific stimuli or events. These components are defined by their polarity, timing (latency),
   and the cognitive or sensory processes they reflect.
@@ -56,7 +56,7 @@ P1 (P100) |	Positive |	~100 |	Early visual processing
 N1 (N100) |	Negative	| ~100 |	Early sensory detection (auditory/visual)
 P2 (P200)	| Positive |	~200 |	Perceptual processing, attention
 N2 (N200)	| Negative |	~200	| Conflict detection, cognitive control
-P3 (P300) |	Positive	~300	Attention, working memory
+P3 (P300) |	Positive |	~300 |	Attention, working memory
 N400 |	Negative	| ~400 |	Language processing, semantic processing
 LPC |	Positive |	>400 |	Memory retrieval, decision-making
 ERN |	Negative |	~50-100 |	Error monitoring
@@ -90,6 +90,21 @@ Several factors contribute to the generation of scalp potentials, each highlight
     &emsp;&emsp;<b>8.	Activity in large-scale brain networks</b> that coordinate functional states and processes.
 </p>
 
+## **independent Component Analysis (ICA)**
+
+<p align='justify'>
+    &emsp;&emsp;a computational technique used to separate mixed signals into independent sources. It’s widely used in fields such as neuroscience, EEG analysis, and signal processing. Several algorithms exist to perform ICA, each with its approach and assumptions about the data.
+</p>
+
+
+|Algorithm | Focus | Key Advantage | Key Disadvantage|
+|----------|-------|---------------|-----------------|
+|FastICA | Maximize non-Gaussianity | Fast and efficient | Sensitive to initialization and noise|
+|JADE | Diagonalize cumulant matrices | Robust for high-dimensional data |	Slower than FastICA
+Infomax ICA | Maximize mutual information | Popular in EEG analysis | Assumes super-Gaussian distribution
+Extended Infomax ICA | Handle super- and sub-Gaussian data | More flexible than Infomax ICA | Slower and more complex
+Sparse ICA | Sparse source assumption | Works well with sparse data | Not suitable for non-sparse signals
+Kernel ICA | Non-linear source separation | Handles non-linear mixing of signals | Computationally complex
 
 
 
