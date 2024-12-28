@@ -3,6 +3,20 @@
 
 # **Reinforcement Learning**
 
+## Open notebooks in colab
+<p align='justify'>
+    &emsp;&emsp; Click on below links to open each jupyter notebook in google colab
+</p>
+
+
+[logo]: https://colab.research.google.com/assets/colab-badge.svg
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/1_reinforcementLearning.ipynb) &nbsp; **1_reinforcementLearning**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/2_RL_RandomSearchPolicy.ipynb) &nbsp; **2_RL_RandomSearchPolicy**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/3_RL_PolicyGradientAlgorithm.ipynb) &nbsp; **3_RL_PolicyGradientAlgorithm**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/4_RL_MarkoveDecisionProcess.ipynb) &nbsp; **4_RL_MarkoveDecisionProcess**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/5_ModelBased_PolicyIteration.ipynb) &nbsp; **5_ModelBased_PolicyIteration**
+
+
 <img width="400" align="right" src="https://assets-global.website-files.com/621e749a546b7592125f38ed/6231efbede9e9af7f611ff68_fig%201.gif">
 
 - Reinforcement learning is a machine learning training method based on rewarding desired behaviors and punishing undesired ones. In general, a reinforcement learning agent is able to perceive and interpret its environment, take actions and learn through trial and error.
