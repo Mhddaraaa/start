@@ -72,3 +72,11 @@ Model-free algorithms are either value-based or policy-based.
 - Policy-based approaches suffer from a high variance which manifests as instabilities during the training process.
 - Value-based approaches, though more stable, are not suitable to model continuous action spaces.
 - One of the most powerful RL algorithms, called the **actor-critic** algorithm, is built by combining the value-based (critic) and policy-based (actor) approaches.
+
+
+---
+## **References**
+
+- [Stanford CS234 Reinforcement Learning](https://www.youtube.com/watch?v=WsvFL-LjA6U&list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX)
+- [Introduction to Deep Reinforcement Learning - Nimish Sanghi](https://nsanghi.com/blog/deep-rl/)
+- [Reinforcement Learning Cookbook - yuxi hayden liu](https://www.amazon.com/PyTorch-Reinforcement-Learning-Cookbook-self-learning/dp/1838551964)
