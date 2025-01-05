@@ -16,6 +16,8 @@
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/4_RL_MarkoveDecisionProcess.ipynb) &nbsp; **4_RL_MarkoveDecisionProcess**
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/5_ModelBased_PolicyIteration.ipynb) &nbsp; **5_ModelBased_PolicyIteration**
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/6_RL_MonteCarlo.ipynb) &nbsp; **6_RL_MonteCarlo**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/7_RL_TemporalDifference.ipynb) &nbsp; **7_RL_TemporalDifference**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/8_RL_FunctionApproximation.ipynb) &nbsp; **8_RL_FunctionApproximation**
 
 
 <img width="400" align="right" src="https://assets-global.website-files.com/621e749a546b7592125f38ed/6231efbede9e9af7f611ff68_fig%201.gif">
