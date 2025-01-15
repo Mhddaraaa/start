@@ -21,6 +21,7 @@
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/8_RL_FunctionApproximation.ipynb) &nbsp; **8_RL_FunctionApproximation**
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/9_RL_DeepQNetwork.ipynb) &nbsp; **9_RL_DeepQNetwork**
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/10_RL_PolicySearch.ipynb) &nbsp; **10_RL_PolicySearch**
+- [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/11_RL_PolicySearch(PPO).ipynb) &nbsp; **11_RL_PolicySearch(PPO)**
 
 
 <img width="400" align="right" src="https://assets-global.website-files.com/621e749a546b7592125f38ed/6231efbede9e9af7f611ff68_fig%201.gif">
