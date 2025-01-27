@@ -25,6 +25,14 @@
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/12_RL_DeepDeterministicPolicy(DDP).ipynb) &nbsp; **12_RL_DeepDeterministicPolicy(DDP)**
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/13_RL_SoftActiorCritic.ipynb) &nbsp; **13_RL_SoftActiorCritic(SAC)**
 
+<br>
+<figure>
+  <img src="https://github.com/Mhddaraaa/start/blob/main/ReinforcementLearning/SAC_models/Humanoid.gif" alt="SAC_git" width='400'>
+  <figcaption>SAC trained on Humanoid</figcaption>
+</figure>
+
+<br>
+<br>
 
 <img width="400" align="right" src="https://assets-global.website-files.com/621e749a546b7592125f38ed/6231efbede9e9af7f611ff68_fig%201.gif">
 
