@@ -1,0 +1,8 @@
+My high school, 8th grade students information
+==============================================
+
+Name        Birth day       Email
+----        --------        ------
+Virat       5 June, 1882    virat@gmail.com
+ali         10 August 1884  ali_new@yahoo.com
+joe         3 February 1883 joe.1883@gmail.com
