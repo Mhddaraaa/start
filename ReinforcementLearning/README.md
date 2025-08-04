@@ -5,10 +5,10 @@
 
 ## Open notebooks in colab
 <p align='justify'>
-    &emsp;&emsp; Click on below links to open each jupyter notebook in google colab
+    &emsp;&emsp; Click on below links to open each jupyter notebook in google colab. You can see a git of SAC trained on Humanoid:
 </p>
 
-
+<img src="https://github.com/Mhddaraaa/start/blob/main/ReinforcementLearning/SAC_models/Humanoid.gif" alt="SAC_git" width='400' align='right'>
 
 [logo]: https://colab.research.google.com/assets/colab-badge.svg
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/1_reinforcementLearning.ipynb) &nbsp; **1_reinforcementLearning**
@@ -26,15 +26,6 @@
 - [![colab][logo]](https://colab.research.google.com/github/Mhddaraaa/start/blob/main/ReinforcementLearning/13_RL_SoftActiorCritic.ipynb) &nbsp; **13_RL_SoftActiorCritic(SAC)**
 
 <br>
-<figure>
-  <img src="https://github.com/Mhddaraaa/start/blob/main/ReinforcementLearning/SAC_models/Humanoid.gif" alt="SAC_git" width='400'>
-  <figcaption>SAC trained on Humanoid</figcaption>
-</figure>
-
-<br>
-<br>
-
-<img width="400" align="right" src="https://assets-global.website-files.com/621e749a546b7592125f38ed/6231efbede9e9af7f611ff68_fig%201.gif">
 
 - Reinforcement learning is a machine learning training method based on rewarding desired behaviors and punishing undesired ones. In general, a reinforcement learning agent is able to perceive and interpret its environment, take actions and learn through trial and error.
 - In reinforcement learning, your system learns how to interact intuitively with the environment by basically doing stuff and watching what happens
@@ -45,10 +36,25 @@
   2. The **environment** the agent interacts with
   3. The **policy** that the agent follows to take actions
   4. The **reward** signal that the agent observes upon taking actions
+
+ ```mermaid
+graph LR
+    A[Agent] -->|Action aₜ| E[Environment]
+    E -->|State sₜ₊₁<br>Reward rₜ₊₁| A
+
+    subgraph Agent
+        Policy["Policy π(s)"] -->|Select aₜ| Action
+        ValueFunction["Value Function V(s)/Q(s,a)"]
+        Policy -->|Update| ValueFunction
+        ValueFunction -->|Influence| Policy
+    end
+```
+  
 <br>
  
 ## What Is a **Policy** in Reinforcement Learning?
-<img width="300" align="left" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmR3NTFlMWl0ZWtrOW1xdHNqY2V1Z3NxcWc2ejE0aWhsZzBienBnMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bU2xOiv6LlSyB75szf/giphy.gif">
+<img width="300" align="right" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmR3NTFlMWl0ZWtrOW1xdHNqY2V1Z3NxcWc2ejE0aWhsZzBienBnMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bU2xOiv6LlSyB75szf/giphy.gif">
+
 A policy is a strategy that an agent uses in pursuit of goals. The policy dictates the actions that the agent takes as a function of the agent's state and the environment.
 
 <br>
@@ -83,7 +89,7 @@ Model-free algorithms are either value-based or policy-based.
 
 - **Policy-based** algorithms, on the other hand, directly estimate the optimal policy without modeling the value function. By parametrizing the policy directly using learnable weights, they render the learning problem into an explicit optimization problem. Like value-based algorithms, the agent samples trajectories of states and rewards; however, this information is used to explicitly improve the policy by maximizing the average value function across all states.
 <br>
-<img align="right" width="400" src="https://images.synopsys.com/is/image/synopsys/reinforcement-learningV1-01?qlt=82&wid=1200&ts=1680107735401&$responsive$&fit=constrain&dpr=off">
+<img align="right" width="400" src="https://github.com/Mhddaraaa/start/blob/main/ReinforcementLearning/SAC_models/venn_diagram.png">
 
 - Policy-based approaches suffer from a high variance which manifests as instabilities during the training process.
 - Value-based approaches, though more stable, are not suitable to model continuous action spaces.
